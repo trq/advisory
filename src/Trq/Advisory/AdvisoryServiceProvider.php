@@ -19,12 +19,27 @@ class AdvisoryServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
-        $this->commands('advisory.check');
+        $this->commands('advisory.checkerCommand');
 
-        $this->app['advisory.check'] = $this->app->share(function($app)
+        $this->app['advisory.securityChecker'] = $this->app->share(function($app)
+		{
+			return new SecurityChecker;
+		});
+
+        $this->app['advisory.checkerCommand'] = $this->app->share(function($app)
         {
-            return new Commands\AdvisoryCheckerCommand(new SecurityChecker);
+            return new Commands\AdvisoryCheckerCommand($app['advisory.securityChecker']);
         });
+	}
+
+	/**
+	 * Get the services provided by the provider.
+	 *
+	 * @return array
+	 */
+	public function provides()
+	{
+		return array('advisory.securityChecker', 'advisory.checkerCommand');
 	}
 
 }
