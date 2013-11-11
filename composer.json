@@ -19,7 +19,7 @@
         "psr-0": {
             "Trq\\Advisory": "src/"
         }
-    }
+    },
     "extra": {
         "branch-alias": {
             "dev-develop": "1.0.x-dev"
