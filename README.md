@@ -4,7 +4,7 @@ Check your project dependencies against the [Security Advisories Checker](https:
 
 ## Installation
 
-Install this package via composer by executing the following via your terminal:
+Install this package via composer by executing the following via your terminal (currently there is no stable release):
 
     composer require trq/advisory:1.0.*@dev
 
