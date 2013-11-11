@@ -1,10 +1,12 @@
 {
     "name": "trq/advisory",
-    "description": "",
+    "description": "Checks the SensioLabs security advisor for security issues with your libraries.",
+    "keywords": ["Laravel","Security"],
     "authors": [
         {
             "name": "Tony R Quilkey",
-            "email": "trq@thorpesystems.com"
+            "email": "trq@thorpesystems.com",
+            "homepage": "http://thorpesystems.com"
         }
     ],
     "require": {
@@ -16,6 +18,11 @@
     "autoload": {
         "psr-0": {
             "Trq\\Advisory": "src/"
+        }
+    }
+    "extra": {
+        "branch-alias": {
+            "dev-develop": "1.0.x-dev"
         }
     }
 }
