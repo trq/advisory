@@ -4,15 +4,9 @@ Check your project dependencies against the [Security Advisories Checker](https:
 
 ## Installation
 
-Install this package via composer by adding the following to your composer.json file:
+Install this package via composer by executing the following via your terminal:
 
-    "trq/advisory": "1.0.*@dev"
-
-Currently, there is no stable version tagged.
-
-Next, update Composer from the Terminal:
-
-    composer update
+    composer require trq/advisory:1.0.*@dev
 
 Once complete, the service provider needs to be registered. Do this by adding the following to the providers array within app/config/app.php
 
